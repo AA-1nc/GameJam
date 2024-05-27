@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] private float rotateSlerpSpeed;
+    [SerializeField] private Gun gun;
+    [SerializeField] private KeyCode shootKey;
 
     private Vector2 moveDir = Vector2.zero;
     private Vector3 moveVelocity = Vector3.zero;
@@ -27,6 +29,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(shootKey))
+            gun.Shoot();
+
         if (moveDir.magnitude != 0)
         {
             float targetAngle = Mathf.Atan2(moveDir.x, moveDir.y) * Mathf.Rad2Deg;
