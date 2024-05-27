@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 51f4a22cbe8d9604387d3eced47dd2f5
+guid: 2e5e2f1173581b6448db2c0dd7a00680
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -33,16 +33,16 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: walktest
+      name: walk
       takeName: Armature|Armature|mixamo.com|Layer0
       internalID: -4791504522942941401
       firstFrame: 0
       lastFrame: 41
-      wrapMode: 0
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
-      loop: 0
+      loop: 1
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
@@ -122,11 +122,11 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
