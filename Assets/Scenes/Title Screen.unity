@@ -413,6 +413,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 800
       objectReference: {fileID: 0}
+    - target: {fileID: 1716006109820048963, guid: d56108d0c8cb0494cb217ec5a3745cf1,
+        type: 3}
+      propertyPath: gameStart
+      value: Game
+      objectReference: {fileID: 0}
     - target: {fileID: 2120179938575773354, guid: d56108d0c8cb0494cb217ec5a3745cf1,
         type: 3}
       propertyPath: m_Pivot.x

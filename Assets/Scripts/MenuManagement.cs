@@ -7,6 +7,7 @@ public class MenuManagement : MonoBehaviour
 {
     public GameObject mainMenuGroup;
     public GameObject optionsMenuGroup;
+    public string gameStart;
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class MenuManagement : MonoBehaviour
     public void StartNewGame()
     {
         //The below code may change later.
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(gameStart);
     }
 
     public void LoadSavedGame()
