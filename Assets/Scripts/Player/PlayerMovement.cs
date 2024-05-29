@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement Instance;
+
     [SerializeField] private float moveSpeed;
     [SerializeField] private float rotateSlerpSpeed;
     [SerializeField] private Gun gun;
@@ -17,6 +19,9 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+
+        if (Instance != null) Destroy(gameObject);
+        Instance = this;
     }
 
     private void FixedUpdate()
