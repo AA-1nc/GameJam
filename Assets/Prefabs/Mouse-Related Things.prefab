@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6690261096204032466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5992276737897859251}
+  - component: {fileID: 5644663775943924253}
+  m_Layer: 0
+  m_Name: Mouse-Related Things
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5992276737897859251
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6690261096204032466}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5644663775943924253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6690261096204032466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508f7a3be543bbf4e9ce59258f527ff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPosition: {x: 0, y: 0, z: 0}
+  towerTurretGhost: {fileID: 0}
+  tallTurretGhost: {fileID: 0}
+  shortTurretGhost: {fileID: 0}
+  currentTurret: 0
+  obstructed: 0
+  changeColor: 0
+  ghostTurretCollider: {fileID: 0}
+  towerTurretPrefab: {fileID: 414857683142910412, guid: ca2a746d6f7b16a468ab41fec0543d4b,
+    type: 3}
+  tallTurretPrefab: {fileID: 4052894958169322416, guid: 0aa00d5250736e3459fedafc54a18297,
+    type: 3}
+  shortTurretPrefab: {fileID: 5650290963359520287, guid: 9ae152a8b84dc4b4d89d0d4fe56deddd,
+    type: 3}
+  resources: 200
+  currentPrice: 0
