@@ -34,7 +34,7 @@ public class MouseControls : MonoBehaviour
     #endregion
 
     #region Finances
-    [SerializeField] int resources = 200;
+    public int resources = 200;
     public int currentPrice;
 
     #endregion
