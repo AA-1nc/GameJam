@@ -7,6 +7,7 @@ public class Gun : MonoBehaviour
     [Header("References")]
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firePoint;
+    [SerializeField] private bool isPlayer;
 
     [Header("General Settings")]
     [SerializeField] private float bulletAliveTime;
@@ -24,9 +25,9 @@ public class Gun : MonoBehaviour
     [SerializeField] private int ammoPerReload;
     [SerializeField] private float reloadTime;
     
-    public int ammoLeft;
-    public bool isReloading = false;
-    public bool canShoot = true;
+    private int ammoLeft;
+    private bool isReloading = false;
+    private bool canShoot = true;
 
     private void Awake()
     {
@@ -63,6 +64,7 @@ public class Gun : MonoBehaviour
                 Quaternion rot = Quaternion.Euler(0, transform.rotation.eulerAngles.y + angle + Random.Range(-inaccuracyAngle, inaccuracyAngle), 0);
                 GameObject bullet = Instantiate(bulletPrefab, firePoint.position, rot);
                 bullet.GetComponent<Bullet>().SetAliveTime(bulletAliveTime);
+                bullet.GetComponent<DamageSourceTrigger>().SetIsPlayer(isPlayer);
             }
 
             ammoLeft--;
@@ -70,8 +72,7 @@ public class Gun : MonoBehaviour
             if (ammoLeft == 0)
                 break;
 
-            if (i < shotsPerClick - 1)
-                yield return new WaitForSeconds(timeBetweenShots);
+            yield return new WaitForSeconds(timeBetweenShots);
         }
 
         if (ammoLeft > 0)
