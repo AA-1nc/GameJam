@@ -17,7 +17,7 @@ public class MenuManagement : MonoBehaviour
     public void StartNewGame()
     {
         //The below code may change later.
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Game");
     }
 
     public void LoadSavedGame()
