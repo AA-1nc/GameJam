@@ -10,6 +10,7 @@ public class Gun : MonoBehaviour
 
     [Header("General Settings")]
     [SerializeField] private float bulletAliveTime;
+    [SerializeField] private bool isPlayer;
 
     [Header("Spread Settings")]
     [SerializeField] private int bulletsPerShot = 1;
@@ -63,6 +64,7 @@ public class Gun : MonoBehaviour
                 Quaternion rot = Quaternion.Euler(0, transform.rotation.eulerAngles.y + angle + Random.Range(-inaccuracyAngle, inaccuracyAngle), 0);
                 GameObject bullet = Instantiate(bulletPrefab, firePoint.position, rot);
                 bullet.GetComponent<Bullet>().SetAliveTime(bulletAliveTime);
+                bullet.GetComponent<DamageSourceTrigger>().SetIsPlayer(isPlayer);
             }
 
             ammoLeft--;
@@ -70,8 +72,7 @@ public class Gun : MonoBehaviour
             if (ammoLeft == 0)
                 break;
 
-            if (i < shotsPerClick - 1)
-                yield return new WaitForSeconds(timeBetweenShots);
+            yield return new WaitForSeconds(timeBetweenShots);
         }
 
         if (ammoLeft > 0)
