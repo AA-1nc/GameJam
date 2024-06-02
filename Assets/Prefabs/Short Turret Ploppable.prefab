@@ -100,6 +100,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: -4649896719449915795}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 04c31ba0e0b6cde4ba0c4939d63971dc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8591732696545509598}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 04c31ba0e0b6cde4ba0c4939d63971dc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 539116986767777186}
   m_SourcePrefab: {fileID: 100100000, guid: 04c31ba0e0b6cde4ba0c4939d63971dc, type: 3}
 --- !u!1 &5650290963359520287 stripped
 GameObject:
@@ -146,3 +154,43 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.002, y: 0, z: 0.006}
   m_TimeToStationary: 0.5
+--- !u!114 &8591732696545509598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5650290963359520287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ef35bf7e5e5c284898a98d8db430924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aimSpeed: 2.5
+  turretGunRotationYAxisOffset: 90
+  turretGunPositionYAxisOffset: 1
+  fireRate: 1
+  bulletPrefab: {fileID: 8390991583024715679, guid: aca9318d533e14b4c922f411b88342cf,
+    type: 3}
+  bulletSpeed: 30
+--- !u!135 &539116986767777186
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5650290963359520287}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.15
+  m_Center: {x: 0, y: 0, z: 0}
