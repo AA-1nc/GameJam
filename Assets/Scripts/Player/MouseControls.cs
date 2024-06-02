@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MouseControls : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class MouseControls : MonoBehaviour
     #region Finances
     [SerializeField] int resources = 200;
     public int currentPrice;
+    public TextMeshProUGUI scrapText;
 
     #endregion
     // Start is called before the first frame update
@@ -44,6 +46,7 @@ public class MouseControls : MonoBehaviour
         towerTurretGhost.SetActive(false);
         tallTurretGhost.SetActive(false);
         shortTurretGhost.SetActive(false);
+        DisplayCurrentFunds();
     }
 
     // Update is called once per frame
@@ -84,7 +87,8 @@ public class MouseControls : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 resources -= currentPrice;
-                Debug.Log("Placed a Tower Turret");
+                DisplayCurrentFunds();
+                //Debug.Log("Placed a Tower Turret");
                 Instantiate(towerTurretPrefab, towerTurretGhost.transform.position, towerTurretGhost.transform.rotation);
             }
             
@@ -108,7 +112,8 @@ public class MouseControls : MonoBehaviour
              if (Input.GetMouseButtonDown(0))
             {
                 resources -= currentPrice;
-                Debug.Log("Placed a Tall Turret");
+                DisplayCurrentFunds();
+                //Debug.Log("Placed a Tall Turret");
                 Instantiate(tallTurretPrefab, tallTurretGhost.transform.position, tallTurretGhost.transform.rotation);
             }
         }
@@ -131,7 +136,8 @@ public class MouseControls : MonoBehaviour
              if (Input.GetMouseButtonDown(0))
             {
                 resources -= currentPrice;
-                Debug.Log("Placed a Short Turret");
+                DisplayCurrentFunds();
+                //Debug.Log("Placed a Short Turret");
                 Instantiate(shortTurretPrefab, shortTurretGhost.transform.position, shortTurretGhost.transform.rotation);
             }
         }
@@ -182,6 +188,11 @@ public class MouseControls : MonoBehaviour
         tallTurretGhost.SetActive(false);
         shortTurretGhost.SetActive(false);
         ghostTurretCollider = null;
+    }
+
+    public void DisplayCurrentFunds()
+    {
+        scrapText.text = "Scrap: " + resources;
     }
 
     
