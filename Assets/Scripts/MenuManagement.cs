@@ -43,4 +43,9 @@ public class MenuManagement : MonoBehaviour
     {
         SceneManager.LoadScene("Title Screen");
     }
+
+    public void LoadCreditsScene()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }
