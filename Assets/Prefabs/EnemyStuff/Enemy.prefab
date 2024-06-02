@@ -222,6 +222,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   isPlayer: 0
+  scrapDropAmount: 3
+  scrapPrefab: {fileID: 7892215314403979809, guid: a53f494607ec8aa449ff3aaad3108b37,
+    type: 3}
   health: 0
 --- !u!1001 &8966503981363925431
 PrefabInstance:
