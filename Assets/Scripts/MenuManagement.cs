@@ -18,7 +18,7 @@ public class MenuManagement : MonoBehaviour
     public void StartNewGame()
     {
         //The below code may change later.
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("AA Inc Game");
     }
 
     public void LoadSavedGame()
