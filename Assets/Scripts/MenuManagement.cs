@@ -18,19 +18,18 @@ public class MenuManagement : MonoBehaviour
     public void StartNewGame()
     {
         //The below code may change later.
-        SceneManager.LoadScene(gameStart);
+        SceneManager.LoadScene("Level");
     }
 
     public void LoadSavedGame()
     {
-        //More will be added to this later.
-        Debug.Log("No saved games found.");
-    }
+        mainMenuGroup.SetActive(false);
+        optionsMenuGroup.SetActive(true);
+    } 
     
     public void DisplayOptions()
     {
-        mainMenuGroup.SetActive(false);
-        optionsMenuGroup.SetActive(true);
+        Application.Quit();
     }
 
     public void LoadMainMenu()
@@ -42,5 +41,10 @@ public class MenuManagement : MonoBehaviour
     public void LoadTitleScreen()
     {
         SceneManager.LoadScene("Title Screen");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
