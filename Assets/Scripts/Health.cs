@@ -36,7 +36,7 @@ public class Health : MonoBehaviour
 
     
 
-    private void Die()
+    public void Die()
     {
         dead = true;
 
@@ -51,10 +51,12 @@ public class Health : MonoBehaviour
         }
 
         Destroy(gameObject);
+   
 
         if (isPlayer == dead)
         {
-            SceneManager.LoadScene("Title Screen");
+            SceneManager.LoadScene("Credits Proper");
         }
     }
+    
 }

@@ -2,15 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class GameManagement : MonoBehaviour
 {
+    
     [SerializeField] GameObject pauseCanvas;
     public bool paused;
     // Start is called before the first frame update
     void Start()
     {
         pauseCanvas.SetActive(false);
+
+        
     }
+
 
     // Update is called once per frame
     void Update()
@@ -36,4 +41,9 @@ public class GameManagement : MonoBehaviour
                 pauseCanvas.SetActive(false);
             }
     }
+
+    
+
+
+
 }

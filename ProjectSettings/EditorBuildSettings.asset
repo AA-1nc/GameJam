@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/AA Inc Game.unity
     guid: 6055c865a9ddf764f9fea51f1d2fa7f4
   - enabled: 1
-    path: Assets/Scenes/ArtScenes/Creditbackupbackkup.unity
+    path: Assets/Scenes/ArtScenes/Credits Proper.unity
     guid: 24e516ef4d83d6149a18ee8c43ac09a5
   m_configObjects: {}

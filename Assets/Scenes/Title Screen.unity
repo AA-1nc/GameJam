@@ -409,10 +409,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 698478282844819922, guid: d56108d0c8cb0494cb217ec5a3745cf1,
+        type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 924304222831359971, guid: d56108d0c8cb0494cb217ec5a3745cf1,
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 924304222831359971, guid: d56108d0c8cb0494cb217ec5a3745cf1,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.93291
+      objectReference: {fileID: 0}
+    - target: {fileID: 924304222831359971, guid: d56108d0c8cb0494cb217ec5a3745cf1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -301.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 924304222831359971, guid: d56108d0c8cb0494cb217ec5a3745cf1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -230
       objectReference: {fileID: 0}
     - target: {fileID: 1716006109820048963, guid: d56108d0c8cb0494cb217ec5a3745cf1,
         type: 3}
@@ -519,6 +539,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2550631614255706712, guid: d56108d0c8cb0494cb217ec5a3745cf1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 46ab01d7edb7f494da6e97427edfa61d,
+        type: 3}
     - target: {fileID: 3795279368720424446, guid: d56108d0c8cb0494cb217ec5a3745cf1,
         type: 3}
       propertyPath: m_Name
