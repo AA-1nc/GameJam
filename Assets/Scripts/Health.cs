@@ -34,10 +34,11 @@ public class Health : MonoBehaviour
         return isPlayer;
     }
 
+    
+
     private void Die()
     {
         dead = true;
-        SceneManager.LoadScene("Title Screen");
 
         if (!isPlayer)
         {
@@ -50,5 +51,10 @@ public class Health : MonoBehaviour
         }
 
         Destroy(gameObject);
+
+        if (isPlayer == dead)
+        {
+            SceneManager.LoadScene("Title Screen");
+        }
     }
 }
