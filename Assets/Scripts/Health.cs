@@ -6,9 +6,12 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
     [SerializeField] private bool isPlayer;
+    [SerializeField] private int scrapDropAmount = 3;
+    [SerializeField] private GameObject scrapPrefab;
 
     public int health;
-
+    bool dead = false;
+    
     private void Awake()
     {
         health = maxHealth;
@@ -21,7 +24,7 @@ public class Health : MonoBehaviour
 
         health -= damage;
 
-        if (health <= 0)
+        if (health <= 0 && !dead)
             Die();
     }
 
@@ -32,6 +35,18 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
+        dead = true;
+
+        if (!isPlayer)
+        {
+            float dropDist = 2;
+
+            for (int i = 0; i < scrapDropAmount; i++)
+            {
+                Instantiate(scrapPrefab, transform.position + new Vector3(Random.Range(-dropDist, dropDist), 0, Random.Range(-dropDist, dropDist)), Quaternion.Euler(0, Random.Range(0, 360), 0));
+            }
+        }
+
         Destroy(gameObject);
     }
 }
