@@ -45,13 +45,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPosition: {x: 0, y: 0, z: 0}
-  towerTurretGhost: {fileID: 0}
-  tallTurretGhost: {fileID: 0}
-  shortTurretGhost: {fileID: 0}
-  currentTurret: 0
+  towerTurretGhost: {fileID: 414857683142910412, guid: a35f14ea0bd96ae47b4fd23e1bf510ce,
+    type: 3}
+  tallTurretGhost: {fileID: 4052894958169322416, guid: 77b486241df863c4185405cb6f7481cf,
+    type: 3}
+  shortTurretGhost: {fileID: 5650290963359520287, guid: f56be18aec577494faa60a131c056460,
+    type: 3}
+  currentTurret: 1
   obstructed: 0
   changeColor: 0
-  ghostTurretCollider: {fileID: 0}
+  ghostTurretCollider: {fileID: 1499498229580909852, guid: a35f14ea0bd96ae47b4fd23e1bf510ce,
+    type: 3}
   towerTurretPrefab: {fileID: 414857683142910412, guid: ca2a746d6f7b16a468ab41fec0543d4b,
     type: 3}
   tallTurretPrefab: {fileID: 4052894958169322416, guid: 0aa00d5250736e3459fedafc54a18297,
@@ -59,4 +63,4 @@ MonoBehaviour:
   shortTurretPrefab: {fileID: 5650290963359520287, guid: 9ae152a8b84dc4b4d89d0d4fe56deddd,
     type: 3}
   resources: 200
-  currentPrice: 0
+  currentPrice: 100
