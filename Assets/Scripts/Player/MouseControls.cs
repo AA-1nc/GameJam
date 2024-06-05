@@ -38,6 +38,7 @@ public class MouseControls : MonoBehaviour
     [SerializeField] int resources = 200;
     public int currentPrice;
     public TextMeshProUGUI scrapText;
+    public TextMeshProUGUI healthText;
 
     #endregion
     // Start is called before the first frame update
@@ -202,6 +203,9 @@ public class MouseControls : MonoBehaviour
         scrapText.text = "Scrap: " + resources;
     }
 
-    
+    public void DisplayCurrentHealth(int healthAmount)
+    {
+        healthText.text = healthAmount + " HP";
+    }
 
 }

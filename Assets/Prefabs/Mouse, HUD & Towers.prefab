@@ -703,6 +703,7 @@ MonoBehaviour:
   resources: 200
   currentPrice: 0
   scrapText: {fileID: 3650501692495808849}
+  healthText: {fileID: 7288013058986441745}
 --- !u!1 &4850529987377339550
 GameObject:
   m_ObjectHideFlags: 0
