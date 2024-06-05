@@ -45,9 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPosition: {x: 0, y: 0, z: 0}
-  towerTurretGhost: {fileID: 0}
-  tallTurretGhost: {fileID: 0}
-  shortTurretGhost: {fileID: 0}
+  towerTurretGhost: {fileID: 414857683142910412, guid: a35f14ea0bd96ae47b4fd23e1bf510ce,
+    type: 3}
+  tallTurretGhost: {fileID: 4052894958169322416, guid: 77b486241df863c4185405cb6f7481cf,
+    type: 3}
+  shortTurretGhost: {fileID: 5650290963359520287, guid: f56be18aec577494faa60a131c056460,
+    type: 3}
   currentTurret: 0
   obstructed: 0
   changeColor: 0
@@ -60,3 +63,4 @@ MonoBehaviour:
     type: 3}
   resources: 200
   currentPrice: 0
+  scrapText: {fileID: 0}

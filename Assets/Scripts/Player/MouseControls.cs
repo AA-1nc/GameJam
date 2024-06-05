@@ -78,11 +78,11 @@ public class MouseControls : MonoBehaviour
         //Thanks to SpeedTutor for help with this. https://youtu.be/VEAU95v5MO8?si=h7uH6CCgzVPjDU-7
         if (towerTurretGhost.GetComponent<GhostTowerCollisions>().obstructed == true || resources < currentPrice)
         {
-            towerTurretGhost.GetComponent<MeshRenderer>().material.color = Color.red;
+            towerTurretGhost.GetComponent<MeshRenderer>().sharedMaterial.color = Color.red;
         }
         else
         {
-            towerTurretGhost.GetComponent<MeshRenderer>().material.color = Color.green;
+            towerTurretGhost.GetComponent<MeshRenderer>().sharedMaterial.color = Color.green;
 
             if (Input.GetMouseButtonDown(0))
             {
@@ -103,11 +103,11 @@ public class MouseControls : MonoBehaviour
             //Thanks to SpeedTutor for help with this. https://youtu.be/VEAU95v5MO8?si=h7uH6CCgzVPjDU-7
             if (tallTurretGhost.GetComponent<GhostTowerCollisions>().obstructed == true || resources < currentPrice)
         {
-            tallTurretGhost.GetComponentInChildren<MeshRenderer>().material.color = Color.red;
+            tallTurretGhost.GetComponentInChildren<MeshRenderer>().sharedMaterial.color = Color.red;
         }
         else
         {
-            tallTurretGhost.GetComponentInChildren<MeshRenderer>().material.color = Color.green;
+            tallTurretGhost.GetComponentInChildren<MeshRenderer>().sharedMaterial.color = Color.green;
 
              if (Input.GetMouseButtonDown(0))
             {
