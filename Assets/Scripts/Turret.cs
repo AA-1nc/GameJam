@@ -105,11 +105,12 @@ public class Turret : MonoBehaviour
             target.transform.position, 
             target.GetComponent<Rigidbody>().velocity);
 
-        Instantiate(bulletPrefab, new Vector3(
+        GameObject bullet = Instantiate(bulletPrefab, new Vector3(
             transform.position.x,
             transform.position.y + turretGunPositionYAxisOffset,
                 transform.position.z), 
                 Quaternion.LookRotation(targetCenter));
+        bullet.GetComponent<DamageSourceTrigger>().SetIsPlayer(true);
     }
     
     
