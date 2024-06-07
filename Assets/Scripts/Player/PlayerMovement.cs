@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement Instance;
+
     [SerializeField] private float moveSpeed;
     [SerializeField] private float rotateSlerpSpeed;
     [SerializeField] private Gun gun;
@@ -14,9 +16,16 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody rb;
 
+    public MouseControls constructionSystem;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        constructionSystem = FindObjectOfType<MouseControls>();
+
+        if (Instance != null)
+            Destroy(this);
+        Instance = this;
     }
 
     private void FixedUpdate()
@@ -37,6 +46,11 @@ public class PlayerMovement : MonoBehaviour
             float targetAngle = Mathf.Atan2(moveDir.x, moveDir.y) * Mathf.Rad2Deg;
             Quaternion targetRotation = Quaternion.Euler(0, targetAngle, 0);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotateSlerpSpeed * Time.deltaTime);
+            GetComponent<Animator>().SetBool("Pressing Direction", true);
+        }
+        else
+        {
+            GetComponent<Animator>().SetBool("Pressing Direction", false);
         }
     }
 }
