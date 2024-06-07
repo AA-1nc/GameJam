@@ -16,7 +16,10 @@ public class Health : MonoBehaviour
     private void Awake()
     {
         health = maxHealth;
-        FindObjectOfType<MouseControls>().DisplayCurrentHealth(health);
+        if (isPlayer)
+        {
+            FindObjectOfType<MouseControls>().DisplayCurrentHealth(health);
+        }
     }
 
     public void TakeDamage(int damage, bool isPlayer)
@@ -25,7 +28,10 @@ public class Health : MonoBehaviour
         if (this.isPlayer == isPlayer) return;
 
         health -= damage;
-        FindObjectOfType<MouseControls>().DisplayCurrentHealth(health);
+         if (isPlayer)
+        {
+            FindObjectOfType<MouseControls>().DisplayCurrentHealth(health);
+        }
 
         if (health <= 0 && !dead)
             Die();
