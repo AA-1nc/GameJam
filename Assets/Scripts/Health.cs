@@ -28,7 +28,11 @@ public class Health : MonoBehaviour
         if (this.isPlayer == isPlayer) return;
 
         health -= damage;
+<<<<<<< Updated upstream
          if (isPlayer)
+=======
+         if (this.isPlayer)
+>>>>>>> Stashed changes
         {
             FindObjectOfType<MouseControls>().DisplayCurrentHealth(health);
         }
