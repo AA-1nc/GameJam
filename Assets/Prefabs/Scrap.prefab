@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3c13699f9b037043bfbd6039c362647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrapAmount: 50
+  scrapAmount: 25
   randomSpread: 5
 --- !u!1 &8666199836270387647
 GameObject:

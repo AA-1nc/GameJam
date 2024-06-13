@@ -34,7 +34,9 @@ public class Health : MonoBehaviour
         }
 
         if (health <= 0 && !dead)
+        {
             Die();
+        }
     }
 
     public bool IsPlayer()

@@ -19,7 +19,7 @@ public class Scrap : MonoBehaviour
     {
         if (other.GetComponent<PlayerMovement>())
         {
-            FindObjectOfType<MouseControls>().resources += scrapAmount + Random.Range(-randomSpread, randomSpread);
+            FindObjectOfType<MouseControls>().AddResources(scrapAmount + Random.Range(-randomSpread, randomSpread));
             Destroy(gameObject);
         }
     }
